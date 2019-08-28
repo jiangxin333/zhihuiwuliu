@@ -1,29 +1,57 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<div id="app">
+		<!-- 缓存所以路由 -->
+		<keep-alive>
+			<router-view></router-view>
+		</keep-alive>
+		<van-tabbar v-model="active" active-color="#F9A825" v-show="isShow">
+			<van-tabbar-item icon="home-o" to="/" :replace="true">
+				<span>首页</span>
+			</van-tabbar-item>
+			<van-tabbar-item icon="search" to="/supply_of_goods" :replace="true">
+				<span>货源中心</span>
+			</van-tabbar-item>
+			<van-tabbar-item to="/vehicle" :replace="true">
+				<span>车辆管理</span>
+				<img slot="icon" slot-scope="props" :src="props.active ? tabbar.icon3.a_tabar : tabbar.icon3.tabar" />
+			</van-tabbar-item>
+			<van-tabbar-item icon="setting-o" to="/my" :replace="true">
+				<span>我的</span>
+			</van-tabbar-item>
+		</van-tabbar>
+	</div>
 </template>
-
+<script>
+	export default {
+		data() {
+			return {
+				active: this.$store.state.active,
+				isShow: true,
+				tabbar: {
+					icon3: {
+						a_tabar: require('./assets/img/tabBar/a_tabbar3.png'),
+						tabar: require('./assets/img/tabBar/tabbar3.png')
+					}
+				}
+			}
+		},
+		created() {
+		},
+		watch:{
+			$route() {
+				if (this.$route.path == '/home' ||
+				this.$route.path == '/vehicle' ||
+				this.$route.path == '/supply_of_goods' ||
+				this.$route.path == '/my'
+				) {
+					this.isShow = true;
+				} else {
+					this.isShow = false;
+				}
+			}
+		}
+	}
+</script>
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+
 </style>
