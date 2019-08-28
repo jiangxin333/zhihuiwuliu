@@ -13,7 +13,6 @@ export default {
 	  }
   },
   activated() {
-  	this.$store.commit('tabBarNum',0)
   }
 }
 </script>

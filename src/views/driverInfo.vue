@@ -6,7 +6,6 @@
 		  left-arrow
 		  @click-left="onClickLeft"
 		/>
-		
 	</div>
 </template>
 

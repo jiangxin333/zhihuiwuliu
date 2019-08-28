@@ -13,7 +13,6 @@
 			}
 		},
 		activated() {
-			this.$store.commit("tabBarNum",1);
 		}
 	}
 </script>

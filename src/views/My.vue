@@ -12,7 +12,6 @@
 			}
 		},
 		activated() {
-			this.$store.commit('tabBarNum',3)
 		}
 	}
 </script>

@@ -43,12 +43,14 @@
 	export default {
 		data() {
 			return {
+				
 			}
 		},
 		comments: {
+			
 		},
 		activated() {
-			this.$store.commit('tabBarNum',2)
+			
 		}
 	}
 </script>

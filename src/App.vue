@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<!-- 缓存所以路由 -->
+		<!-- 缓存所有路由 -->
 		<keep-alive>
 			<router-view></router-view>
 		</keep-alive>
@@ -25,7 +25,7 @@
 	export default {
 		data() {
 			return {
-				active: this.$store.state.active,
+				active: 0,
 				isShow: true,
 				tabbar: {
 					icon3: {
@@ -45,6 +45,22 @@
 				this.$route.path == '/my'
 				) {
 					this.isShow = true;
+					switch(this.$route.path) {
+						case '/vehicle':
+							this.active = 2;
+							break;
+						case '/home':
+							this.active = 0;
+							break;
+						case '/supply_of_goods':
+							this.active = 1;
+							break;
+						case '/my':
+							this.active = 3;
+							break;
+						default:
+							break;
+					}
 				} else {
 					this.isShow = false;
 				}
