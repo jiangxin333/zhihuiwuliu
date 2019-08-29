@@ -9,14 +9,13 @@
 	export default {
 		data() {
 			return {
-				
+
 			}
 		},
-		activated() {
-		}
+		activated() {}
 	}
 </script>
 
 <style>
-	
+
 </style>

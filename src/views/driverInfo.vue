@@ -1,12 +1,7 @@
 <template>
 	<!-- 司机资料路由页面 -->
 	<div class="driverInfo">
-		<van-nav-bar
-		  title="司机资料"
-		  left-arrow
-		  fixed
-		  @click-left="onClickLeft"
-		/>
+		<van-nav-bar title="司机资料" left-arrow fixed @click-left="onClickLeft" />
 		<div class="box">
 			<div class="driver-name">
 				<div>
@@ -43,12 +38,12 @@
 <script>
 	import VehicleLine from '../components/VehicleLine.vue'
 	export default {
-		components:{
+		components: {
 			VehicleLine
 		},
 		data() {
 			return {
-				evaluateList: ['勤劳能干','永不迟到','态度很好','资源很多','勤劳能干','永不迟到','态度很好','资源很多']
+				evaluateList: ['勤劳能干', '永不迟到', '态度很好', '资源很多', '勤劳能干', '永不迟到', '态度很好', '资源很多']
 			}
 		},
 		methods: {
@@ -64,49 +59,61 @@
 		padding: 15Px;
 		margin-top: 46Px;
 	}
+
 	.driver-name {
 		font-size: 14Px;
 		background-color: #fff;
 		padding: 15px;
 		border-radius: 5px;
+
 		div:first-child {
 			border-bottom: 1px solid #eee;
 			padding-bottom: 15px;
+
 			* {
 				margin-right: 10px;
 			}
-			span:first-child{
+
+			span:first-child {
 				color: #303030;
 			}
-			span:last-child{
+
+			span:last-child {
 				background-color: #FEF6E9;
 				color: #F9A825;
 				padding: 4px 7px;
 				border-radius: 2px;
 			}
+
 			display: flex;
 			align-items: center;
+
 			img {
 				width: 30px;
 			}
 		}
+
 		div:last-child {
 			padding: 15px 0 5px 0;
+
 			span {
 				margin-right: 10px;
 				color: #999999;
 			}
 		}
 	}
+
 	.evaluate {
 		background-color: #fff;
 		padding: 15px 15px 0;
+
 		div:first-child {
 			display: flex;
 			width: 100%;
 			flex-wrap: wrap;
 			align-items: center;
 			border-bottom: 1px solid #eee;
+
 			span {
 				display: block;
 				text-align: center;
@@ -119,24 +126,29 @@
 				margin-bottom: 15px;
 			}
 		}
+
 		div:last-child {
 			display: flex;
 			justify-content: space-between;
 			padding: 15px 0;
 			color: #999999;
+
 			&>span {
 				color: #FF5252;
 			}
 		}
 	}
+
 	p.conmon-top {
 		margin-bottom: 15px;
 		color: #303030;
 		font-size: 14Px;
 	}
+
 	.VehicleLine {
 		background-color: #fff;
 	}
+
 	.conmon-top {
 		margin-top: 15px;
 		border-radius: 5px;

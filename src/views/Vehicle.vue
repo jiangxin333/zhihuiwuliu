@@ -43,14 +43,14 @@
 	export default {
 		data() {
 			return {
-				
+
 			}
 		},
 		comments: {
-			
+
 		},
 		activated() {
-			
+
 		}
 	}
 </script>
@@ -59,9 +59,10 @@
 	.top {
 		width: 100%;
 		height: 90px;
-		background-image: linear-gradient(160deg, #FFCD7D 20%,#FFB43B 80%);
-		border-bottom-left-radius:20px 7px;
-		border-bottom-right-radius:20px 7px;
+		background-image: linear-gradient(160deg, #FFCD7D 20%, #FFB43B 80%);
+		border-bottom-left-radius: 20px 7px;
+		border-bottom-right-radius: 20px 7px;
+
 		h3 {
 			padding-top: 15px;
 			font-size: 16Px;
@@ -69,6 +70,7 @@
 			color: #fff;
 		}
 	}
+
 	.my-vehicle {
 		position: relative;
 		width: 345px;
@@ -82,34 +84,43 @@
 		border: 1px dashed #666;
 		padding-left: 21px;
 		box-sizing: border-box;
+
 		img {
 			width: 50px;
 		}
+
 		span {
 			margin-left: 16px;
 			font-size: 14Px;
 		}
 	}
+
 	.transport {
 		width: 345px;
 		margin: 0 auto;
+
 		&>span {
 			font-size: 15Px;
 			color: #303030;
 		}
+
 		.box {
 			background-color: #ffffff;
 			margin-top: 15px;
 			padding: 16px 15px 15px 15px;
 			border-radius: 5px;
+
 			.box-1 {
 				display: flex;
 				justify-content: space-between;
+
 				p {
 					span {
 						margin-right: 10px;
-						font-size: 16Px;
-						font-weight: 700;
+						font-size: 15Px;
+						color: #303030;
+						font-weight: 550;
+
 						&:last-child {
 							color: #FF5252;
 							font-size: 14Px;
@@ -118,20 +129,25 @@
 					}
 				}
 			}
+
 			.box-2 {
 				padding: 14px 0;
 				border-bottom: 1Px solid #EEEEEE;
+				font-size: 14Px;
 			}
+
 			.box-3 {
 				margin-top: 15px;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				font-size: 13Px;
+
 				.box-3-1 {
 					* {
 						margin-right: 11px;
 					}
+
 					img {
 						width: 30px;
 						vertical-align: middle;

@@ -1,22 +1,21 @@
 <template>
-  <div class="home">
-	  {{msg}}
-  </div>
+	<div class="home">
+		{{msg}}
+	</div>
 </template>
 
 <script>
-export default {
-  name: 'home',
-  data() {
-	  return {
-		  msg: 'home'
-	  }
-  },
-  activated() {
-  }
-}
+	export default {
+		name: 'home',
+		data() {
+			return {
+				msg: 'home'
+			}
+		},
+		activated() {}
+	}
 </script>
 
 <style lang="scss" scoped>
-	
+
 </style>

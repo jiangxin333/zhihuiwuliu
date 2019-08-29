@@ -35,17 +35,18 @@
 				}
 			}
 		},
-		created() {
-		},
-		watch:{
+		created() {},
+		watch: {
 			$route() {
-				if (this.$route.path == '/home' ||
-				this.$route.path == '/vehicle' ||
-				this.$route.path == '/supply_of_goods' ||
-				this.$route.path == '/my'
+				console.log(this.$route.path,'路由');
+				if (
+					this.$route.path == '/home' ||
+					this.$route.path == '/vehicle' ||
+					this.$route.path == '/supply_of_goods' ||
+					this.$route.path == '/my'
 				) {
 					this.isShow = true;
-					switch(this.$route.path) {
+					switch (this.$route.path) {
 						case '/vehicle':
 							this.active = 2;
 							break;
