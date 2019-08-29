@@ -6,6 +6,7 @@ import Supply_of_goods from '@/views/supply_of_goods.vue'
 import My from '@/views/My.vue'
 import DriverInfo from '@/views/driverInfo.vue'
 import My_vehicle from '@/views/my_vehicle.vue'
+import AddVehicle from '@/views/addVehicle.vue'
 
 Vue.use(Router)
 
@@ -44,6 +45,11 @@ export default new Router({
 			path: '/my_vehicle',
 			name: 'my_vehicle',
 			component: My_vehicle
+		},
+		{
+			path: '/addVehicle',
+			name: 'addVehicle',
+			component: AddVehicle
 		}
 	]
 })

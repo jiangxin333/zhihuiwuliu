@@ -50,6 +50,13 @@
 			onClickLeft() {
 				this.$router.go(-1);
 			}
+		},
+		created() {
+			
+		},
+		// 每次进入页面的时候触发
+		activated() {
+			
 		}
 	}
 </script>
@@ -69,7 +76,8 @@
 		div:first-child {
 			border-bottom: 1px solid #eee;
 			padding-bottom: 15px;
-
+			display: flex;
+			align-items: center;
 			* {
 				margin-right: 10px;
 			}
@@ -84,9 +92,6 @@
 				padding: 4px 7px;
 				border-radius: 2px;
 			}
-
-			display: flex;
-			align-items: center;
 
 			img {
 				width: 30px;
