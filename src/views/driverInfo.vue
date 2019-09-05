@@ -11,7 +11,7 @@
 				</div>
 				<div>
 					<span>司机车牌号</span>
-					<span>车长 | 车型</span>
+					<span>车长&nbsp;|&nbsp;车型</span>
 					<span>驾龄</span>
 				</div>
 			</div>

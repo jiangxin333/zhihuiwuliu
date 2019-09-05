@@ -4,10 +4,10 @@
 		<div class="top">
 			<h3>车辆管理</h3>
 		</div>
-		<div class="my-vehicle">
+		<router-link to="/my_vehicle" tag="div" class="my-vehicle">
 			<img src="../assets/img/vehicle/my_vehicle.png" alt="">
 			<span>我的车辆</span>
-		</div>
+		</router-link>
 		<div class="transport">
 			<span>运输中的车辆</span>
 			<div class="box">
@@ -113,14 +113,11 @@
 			.box-1 {
 				display: flex;
 				justify-content: space-between;
-
 				p {
 					span {
 						margin-right: 10px;
 						font-size: 15Px;
 						color: #303030;
-						font-weight: 550;
-
 						&:last-child {
 							color: #FF5252;
 							font-size: 14Px;

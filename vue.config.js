@@ -1,11 +1,50 @@
 const path = require('path');
 
 function resolve(dir) {
-  return path.join(__dirname, dir);
+	return path.join(__dirname, dir);
 }
 
 module.exports = {
-	 chainWebpack: (config)=>{
+	publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
+	// outputDir: 在npm run build时 生成文件的目录 type:string, default:'dist'
+	// outputDir: 'dist',
+	// pages:{ type:Object,Default:undfind }
+	assetsDir: "./",
+	devServer: {
+		port: 8088, // 端口号
+		host: "localhost",
+		https: false, // https:{type:Boolean}
+		open: true, //配置自动启动浏览器
+		proxy: {
+			'/api': {
+				target: 'http://60.205.206.53:9003/goods-service/',
+				changeOrigin: true,
+				ws: true,
+				pathRewrite: {
+					'^/api': '/'
+				}
+			},
+			'/bpi': {
+				target: 'http://60.205.206.53:9001/user-service/',
+				changeOrigin: true,
+				pathRewrite: {
+					"^/bpi": ""
+				}
+			}
+		}
+		// proxy: 'http://localhost:4000' // 配置跨域处理,只有一个代理
+		// proxy: {
+		//   "/api": {
+		//     target: "<url>",
+		//     ws: true,
+		//     changeOrigin: true
+		//   },
+		//   "/foo": {
+		//     target: "<other_url>"
+		//   }
+		// } // 配置多个代理
+	},
+	chainWebpack: (config) => {
 		//修改文件引入自定义路径
 		// 给src起别名方便查找文件引入
 		config.resolve.alias

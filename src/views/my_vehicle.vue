@@ -1,7 +1,7 @@
 <template>
 	<!-- 我的车辆 -->
 	<div class="my-vehicle">
-		<van-nav-bar border title="司机资料" right-text="添加车辆" left-arrow fixed @click-right="onClickRight" @click-left="onClickLeft" />
+		<van-nav-bar border title="我的车辆" right-text="添加车辆" left-arrow fixed @click-right="onClickRight" @click-left="onClickLeft" />
 		<!-- 搜索框 -->
 		<div class="box">
 			<div class="search">
@@ -42,6 +42,7 @@
 			},
 			onClickRight() {
 				console.log('添加车辆事件');
+				this.$router.push('/addVehicle')
 			}
 		}
 	}
