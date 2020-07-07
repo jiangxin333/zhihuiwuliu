@@ -11,7 +11,7 @@
     "core-js": "^2.6.5",
     "install": "^0.13.0",
     "lib-flexible": "^0.3.2",
-    "npm": "^6.11.2",
+    "npm": "^6.14.6",
     "path": "^0.12.7",
     "postcss-plugin-px2rem": "^0.8.1",
     "postcss-px2rem": "^0.3.0",
